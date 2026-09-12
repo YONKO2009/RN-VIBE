@@ -1353,3 +1353,235 @@ a:focus-visible {
 #screen-player.active ~ .bottom-nav {
   display: none;
 }
+/* ==================== OBSIDIAN THEME / GLASSMORPHISM ==================== */
+:root {
+  --obsidian-ink: #0a0a0f;
+  --obsidian-surface: rgba(18, 18, 24, 0.72);
+  --obsidian-surface-deep: rgba(12, 12, 18, 0.88);
+  --obsidian-glass-border: rgba(255, 255, 255, 0.08);
+  --obsidian-glass-border-strong: rgba(255, 255, 255, 0.14);
+  --obsidian-text: #f0f0f5;
+  --obsidian-text-dim: #9ca3af;
+  --obsidian-text-muted: #6b7280;
+  --obsidian-accent: #8b5cf6;
+  --obsidian-accent-glow: rgba(139, 92, 246, 0.35);
+  --obsidian-line: rgba(255,255,255,0.06);
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0f 0%, #12121a 50%, #0f0f16 100%);
+  color: var(--obsidian-text);
+}
+
+.app-frame {
+  background: var(--obsidian-surface-deep);
+  border: 1px solid var(--obsidian-glass-border-strong);
+  border-radius: 48px;
+  backdrop-filter: blur(32px) saturate(120%);
+  -webkit-backdrop-filter: blur(32px) saturate(120%);
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.05) inset,
+    0 0 60px rgba(139,92,246,0.08);
+}
+
+.screen {
+  background: transparent;
+}
+
+.screen.active {
+  background: linear-gradient(180deg, rgba(18,18,24,0.55) 0%, rgba(10,10,15,0.85) 100%);
+}
+
+/* Glass cards */
+.hero-card,
+.playlist-cover,
+.library-cover,
+.recent-cover,
+.now-playing-card,
+.theme-opt,
+.audio-opt,
+.lang-item {
+  background: linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid var(--obsidian-glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-card:hover,
+.playlist-cover:hover,
+.library-cover:hover,
+.recent-cover:hover {
+  border-color: var(--obsidian-glass-border-strong);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08), 0 0 20px var(--obsidian-accent-glow);
+}
+
+/* Glass buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--obsidian-accent) 0%, #7c3aed 100%);
+  box-shadow: 0 4px 20px var(--obsidian-accent-glow), inset 0 1px 0 rgba(255,255,255,0.15);
+  color: #fff;
+  font-family: var(--font-cta);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 28px var(--obsidian-accent-glow), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.pill {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--obsidian-text);
+}
+
+.pill.active {
+  background: var(--obsidian-ink);
+  border-color: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.search-bar {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.search-bar input {
+  color: var(--obsidian-text);
+}
+
+.search-bar input::placeholder {
+  color: var(--obsidian-text-muted);
+}
+
+/* Typography updates per Task 5 plan */
+.onboarding-title .title-brand {
+  font-family: var(--font-hero);
+  font-size: 72px;
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+  display: block;
+  color: var(--obsidian-text);
+  text-shadow: 0 4px 24px rgba(139,92,246,0.35);
+}
+
+.onboarding-title .title-sub {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+  display: block;
+  color: var(--obsidian-text-dim);
+}
+
+.btn-primary {
+  font-family: var(--font-cta);
+  font-weight: 600;
+}
+
+.onboarding-signin {
+  font-family: var(--font-cta);
+}
+
+.hero-title {
+  font-family: var(--font-hero);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--obsidian-text);
+  letter-spacing: -1px;
+}
+
+/* Screen backgrounds for all screens */
+#screen-onboarding {
+  background: linear-gradient(160deg, #0a0a12 0%, #12121f 60%, #0d0d14 100%);
+}
+
+/* Bottom nav glass */
+.bottom-nav {
+  background: rgba(10,10,15,0.82);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+.nav-item {
+  color: var(--obsidian-text-muted);
+}
+
+.nav-item.active {
+  color: var(--obsidian-text);
+}
+
+.nav-item svg {
+  stroke: var(--obsidian-text-muted);
+}
+
+.nav-item.active svg {
+  stroke: var(--obsidian-text);
+}
+
+/* Progress and controls */
+.progress-track {
+  background: rgba(255,255,255,0.08);
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--obsidian-accent), #a78bfa);
+}
+
+.progress-handle {
+  background: #fff;
+  box-shadow: 0 0 10px var(--obsidian-accent-glow);
+}
+
+.ctrl-play {
+  background: linear-gradient(135deg, var(--obsidian-accent), #7c3aed);
+  box-shadow: 0 6px 20px var(--obsidian-accent-glow);
+}
+
+.ctrl-btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Player art inner glass */
+.player-art-inner {
+  background: linear-gradient(145deg, rgba(20,20,30,0.9) 0%, rgba(10,10,18,0.95) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+}
+
+/* Page title typography */
+.page-title {
+  color: var(--obsidian-text);
+  letter-spacing: -1.2px;
+}
+
+.greeting-label,
+.greeting-name,
+.section-title,
+.library-name,
+.track-title,
+.queue-title,
+.settings-name,
+.submenu-title,
+.category-item .cat-name {
+  color: var(--obsidian-text);
+}
+
+.greeting-label,
+.greeting-name,
+.page-title,
+.section-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.6px;
+}
+
+/* Playlist hero glass */
+.playlist-hero {
+  background: linear-gradient(135deg, rgba(139,92,246,0.25) 0%, rgba(124,58,237,0.35) 100%);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 24px rgba(139,92,246,0.25);
+}
