@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYBAU Music</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Figtree:wght@400;500;600;700;800;900&family=Fredoka:wght@400;500;600;700&family=Gasoek+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-frame">
+    <!-- Dynamic Island -->
+    <div class="dynamic-island"></div>
+
+    <!-- ==================== ONBOARDING ==================== -->
+    <section id="screen-onboarding" class="screen active">
+      <div class="onboarding-bg">
+        <div class="onboarding-content">
+          <h1 class="onboarding-title"><span class="title-brand">Music</span><br/><span class="title-sub">for a better<br/>you</span></h1>
+          <p class="onboarding-sub">Discover. listen. feel.</p>
+          <div class="onboarding-illustration">
+            <svg viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="illustration-svg">
+              <!-- Simple illustration placeholder -->
+              <rect x="20" y="180" width="260" height="100" rx="20" fill="#E8E8E8"/>
+              <circle cx="90" cy="150" r="35" fill="#E8E8E8"/>
+              <rect x="140" y="120" width="100" height="80" rx="15" fill="#E8E8E8"/>
+              <rect x="160" y="100" width="60" height="50" rx="10" fill="#D8D8D8"/>
+              <circle cx="220" cy="260" r="25" fill="#E8E8E8"/>
+              <rect x="30" y="240" width="80" height="50" rx="10" fill="#D8D8D8"/>
+              <!-- Plant leaves -->
+              <path d="M240 200 Q260 140 245 100 Q255 140 260 200" fill="#E8E8E8"/>
+              <path d="M250 210 Q275 160 265 120" fill="#D8D8D8"/>
+              <path d="M230 210 Q210 150 225 110" fill="#D8D8D8"/>
+              <rect x="235" y="195" width="20" height="50" rx="5" fill="#C8C8C8"/>
+              <!-- Cat -->
+              <ellipse cx="100" cy="270" rx="35" ry="18" fill="#E8E8E8"/>
+              <circle cx="72" cy="252" r="14" fill="#E8E8E8"/>
+              <path d="M60 240 L55 228 L68 235" fill="#E8E8E8"/>
+              <path d="M82 240 L88 228 L75 235" fill="#E8E8E8"/>
+            </svg>
+          </div>
+          <button class="btn-primary btn-full" onclick="navigateTo('home')">Get Started →</button>
+          <p class="onboarding-signin">Already have an account? <a href="#" class="link">Sign in</a></p>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HOME ==================== -->
+    <section id="screen-home" class="screen">
+      <div class="screen-scroll">
+        <header class="home-header">
+          <div class="greeting">
+            <p class="greeting-label">Good Morning</p>
+            <h2 class="greeting-name">Anuj Gay</h2>
+          </div>
+          <div class="header-actions">
+            <button class="icon-btn" aria-label="Notifications">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+            </button>
+            <div class="avatar-small" onclick="navigateTo('settings')" style="cursor:pointer;" title="Settings"></div>
+          </div>
+        </header>
+
+        <div class="search-bar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Search song, Artist, podcast...." />
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-text">
+            <h2 class="hero-title">Chill<br/>Vibe</h2>
+            <p class="hero-sub">Relax and take<br/>a deep breath</p>
+            <button class="play-btn-sm" onclick="navigateTo('player')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg>
+            </button>
+          </div>
+          <div class="hero-art"></div>
+        </div>
+
+        <div class="section">
+          <div class="section-header">
+            <h3 class="section-title">Made for you</h3>
+            <button class="chevron-btn" aria-label="View all"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+          <div class="playlist-row">
+            <div class="playlist-card">
+              <div class="playlist-cover" style="background:#E0E0E0;"></div>
+              <span class="playlist-card-label">Focus playlist</span>
+            </div>
+            <div class="playlist-card">
+              <div class="playlist-cover" style="background:#E0E0E0;"></div>
+              <span class="playlist-card-label">Relax playlist</span>
+            </div>
+            <div class="playlist-card">
+              <div class="playlist-cover" style="background:#E0E0E0;"></div>
+              <span class="playlist-card-label">Dance playlist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header">
+            <h3 class="section-title">Recently played</h3>
+            <button class="chevron-btn" aria-label="View all"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+          <div class="recent-row">
+            <div class="recent-item">
+              <div class="recent-cover" style="background:#D0D0D0;"></div>
+              <div class="recent-info">
+                <p class="recent-title">unknown</p>
+                <p class="recent-artist">Anuj gay</p>
+              </div>
+            </div>
+            <div class="recent-item">
+              <div class="recent-cover" style="background:#D0D0D0;"></div>
+              <div class="recent-info">
+                <p class="recent-title">unknown</p>
+                <p class="recent-artist">Ravi Gay</p>
+              </div>
+            </div>
+            <div class="recent-item">
+              <div class="recent-cover" style="background:#D0D0D0;"></div>
+              <div class="recent-info">
+                <p class="recent-title">unknown</p>
+                <p class="recent-artist">Brupam gay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEARCH ==================== -->
+    <section id="screen-search" class="screen">
+      <div class="screen-scroll">
+        <h2 class="page-title">Search</h2>
+        <div class="search-bar search-bar-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Search song, Artist, podcast...." />
+        </div>
+
+        <div class="filter-pills">
+          <button class="pill active">Songs</button>
+          <button class="pill">Artists</button>
+          <button class="pill">Album</button>
+          <button class="pill">Playlists</button>
+        </div>
+
+        <div class="category-list">
+          <button class="category-item" onclick="navigateTo('search')">
+            <span class="cat-icon">📈</span>
+            <span class="cat-name">Trending</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="category-item" onclick="navigateTo('search')">
+            <span class="cat-icon">🗓️</span>
+            <span class="cat-name">New release</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="category-item" onclick="navigateTo('search')">
+            <span class="cat-icon">📊</span>
+            <span class="cat-name">Top charts</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="category-item" onclick="navigateTo('search')">
+            <span class="cat-icon">😊</span>
+            <span class="cat-name">Mood</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="category-item" onclick="navigateTo('search')">
+            <span class="cat-icon">⊞</span>
+            <span class="cat-name">Genre</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="category-item" onclick="navigateTo('search')">
+            <span class="cat-icon">🎤</span>
+            <span class="cat-name">Podcast</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LIBRARY ==================== -->
+    <section id="screen-library" class="screen">
+      <div class="screen-scroll">
+        <header class="page-header-row">
+          <h2 class="page-title">Your Library</h2>
+          <div class="header-actions">
+            <button class="icon-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </button>
+            <button class="icon-btn" aria-label="Add">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="filter-pills">
+          <button class="pill active">Playlist</button>
+          <button class="pill">Artists</button>
+          <button class="pill">Album</button>
+          <button class="pill">Downloaded</button>
+        </div>
+
+        <div class="library-list">
+          <div class="library-item">
+            <div class="library-cover liked">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#000" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div class="library-info">
+              <p class="library-name">Liked Song</p>
+              <p class="library-meta">1,223 songs</p>
+            </div>
+            <button class="dots-btn" aria-label="Options">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+            </button>
+          </div>
+          <div class="library-item" onclick="navigateTo('playlist')">
+            <div class="library-cover" style="background:#E0E0E0;"></div>
+            <div class="library-info">
+              <p class="library-name">Chill Vibe</p>
+              <p class="library-meta">Play list • Ravi</p>
+            </div>
+            <button class="dots-btn" aria-label="Options">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+            </button>
+          </div>
+          <div class="library-item" onclick="navigateTo('playlist')">
+            <div class="library-cover" style="background:#E0E0E0;"></div>
+            <div class="library-info">
+              <p class="library-name">Anime Viibe</p>
+              <p class="library-meta">Play list • Ravi</p>
+            </div>
+            <button class="dots-btn" aria-label="Options">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+            </button>
+          </div>
+          <div class="library-item" onclick="navigateTo('playlist')">
+            <div class="library-cover" style="background:#E0E0E0;"></div>
+            <div class="library-info">
+              <p class="library-name">Workout Mix</p>
+              <p class="library-meta">Play list • Ravi</p>
+            </div>
+            <button class="dots-btn" aria-label="Options">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+            </button>
+          </div>
+          <div class="library-item" onclick="navigateTo('playlist')">
+            <div class="library-cover" style="background:#E0E0E0;"></div>
+            <div class="library-info">
+              <p class="library-name">Focus</p>
+              <p class="library-meta">Play list • Ravi</p>
+            </div>
+            <button class="dots-btn" aria-label="Options">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+            </button>
+          </div>
+          <div class="library-item" onclick="navigateTo('playlist')">
+            <div class="library-cover" style="background:#E0E0E0;"></div>
+            <div class="library-info">
+              <p class="library-name">Nigger</p>
+              <p class="library-meta">Play list • Ravi</p>
+            </div>
+            <button class="dots-btn" aria-label="Options">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PLAYLIST DETAIL ==================== -->
+    <section id="screen-playlist" class="screen">
+      <div class="screen-scroll">
+        <header class="page-header-row">
+          <button class="icon-btn" onclick="navigateTo('library')" aria-label="Back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <div style="flex:1"></div>
+          <button class="dots-btn" aria-label="Options">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+        </header>
+
+        <div class="playlist-hero" style="background:#C62828;">
+          <div class="playlist-hero-art">
+            <svg viewBox="0 0 200 200" fill="none" style="width:60%;margin:auto;display:block;margin-top:20px;">
+              <rect x="40" y="60" width="120" height="80" rx="10" fill="#fff" opacity="0.9"/>
+              <circle cx="70" cy="100" r="20" fill="#C62828"/>
+              <rect x="90" y="80" width="50" height="40" rx="5" fill="#C62828" opacity="0.5"/>
+              <path d="M50 150 Q100 170 150 150" stroke="#fff" stroke-width="3" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="playlist-detail">
+          <h2 class="playlist-detail-title">Liked Songs</h2>
+          <p class="playlist-detail-meta">
+            <span class="verified">✓</span> Play list • Ravi
+          </p>
+          <p class="playlist-detail-stats">23,223 saves • 256hr 45m</p>
+        </div>
+
+        <div class="playlist-actions">
+          <button class="action-circle" aria-label="Add">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <button class="action-circle" aria-label="Download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
+          </button>
+          <button class="action-circle" aria-label="More">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+          <button class="play-btn-lg" onclick="navigateTo('player')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+        </div>
+
+        <div class="track-list">
+          <div class="track-item" onclick="navigateTo('player')">
+            <div class="track-cover" style="background:#4A3728;"></div>
+            <div class="track-info">
+              <p class="track-title">Maula Mera Maula</p>
+              <p class="track-artist">Roop kumar rathod</p>
+            </div>
+          </div>
+          <div class="track-item" onclick="navigateTo('player')">
+            <div class="track-cover" style="background:#8B4513;"></div>
+            <div class="track-info">
+              <p class="track-title">Tera mera pyaar hai amar</p>
+              <p class="track-artist">Ahmed Jahanzeb</p>
+            </div>
+          </div>
+          <div class="track-item" onclick="navigateTo('player')">
+            <div class="track-cover" style="background:#D4A574;"></div>
+            <div class="track-info">
+              <p class="track-title">Aazru</p>
+              <p class="track-artist">Asim Azhar, Noor, Khan, MAdhurxo</p>
+            </div>
+          </div>
+          <div class="track-item" onclick="navigateTo('player')">
+            <div class="track-cover" style="background:#333;"></div>
+            <div class="track-info">
+              <p class="track-title">Qurban</p>
+              <p class="track-artist">Masroor Ali Khan, Goher Mumtaz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PLAYER ==================== -->
+    <section id="screen-player" class="screen">
+      <div class="screen-scroll">
+        <header class="player-header">
+          <button class="icon-btn" onclick="navigateTo('home')" aria-label="Collapse">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="player-header-text">
+            <p class="player-from">Playing from</p>
+            <p class="player-from-name">My playlist</p>
+          </div>
+          <div style="width:32px"></div>
+        </header>
+
+        <div class="player-art">
+          <div class="player-art-inner" style="background:#8B0000;">
+            <div class="coke-badge">Coke<br/>Studio</div>
+            <p class="player-art-season">SEASON 8</p>
+            <h2 class="player-art-title">TAJDAR-E-HARAM</h2>
+            <p class="player-art-artist">ATIF ASLAM</p>
+            <!-- Instruments illustration -->
+            <svg viewBox="0 0 300 150" style="margin-top:10px;width:90%;">
+              <circle cx="60" cy="80" r="30" fill="#fff" opacity="0.15"/>
+              <rect x="120" y="40" width="8" height="80" rx="4" fill="#fff" opacity="0.2"/>
+              <rect x="180" y="60" width="80" height="40" rx="20" fill="#fff" opacity="0.1"/>
+              <circle cx="240" cy="50" r="15" fill="#fff" opacity="0.15"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="player-song-info">
+          <h3 class="player-song-title">Tajdar-E-Haram Coke studio</h3>
+          <p class="player-song-artist">Atif alam</p>
+        </div>
+
+        <div class="player-progress">
+          <div class="progress-track">
+            <div class="progress-bar" style="width:33%;"></div>
+            <div class="progress-handle" style="left:33%;"></div>
+          </div>
+          <div class="progress-times">
+            <span>1:10</span>
+            <span>3:10</span>
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <button class="ctrl-btn" aria-label="Shuffle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+          </button>
+          <button class="ctrl-btn" aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#000"><polygon points="15,5 5,12 15,19"/><rect x="2" y="5" width="2" height="14"/></svg>
+          </button>
+          <button class="ctrl-btn ctrl-play" aria-label="Play">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+          <button class="ctrl-btn" aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#000"><polygon points="3,5 13,12 3,19"/><rect x="20" y="5" width="2" height="14"/></svg>
+          </button>
+          <button class="ctrl-btn" aria-label="Repeat">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+          </button>
+        </div>
+
+        <div class="player-bottom-actions">
+          <button class="bottom-action-btn" aria-label="Info">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          </button>
+          <button class="bottom-action-btn" onclick="navigateTo('queue')" aria-label="Queue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </button>
+          <button class="bottom-action-btn" aria-label="Lyrics">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          </button>
+        </div>
+
+        <div class="now-playing-card">
+          <div class="now-playing-info">
+            <p class="np-title">Tajdar-E-Haram</p>
+            <p class="np-duration">3:10</p>
+            <p class="np-artist">Atif alam</p>
+          </div>
+          <div class="np-description">
+            <h4>Description</h4>
+            <p>Tajdar-E-Haram Coke studio season 11 pakistan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== QUEUE ==================== -->
+    <section id="screen-queue" class="screen">
+      <div class="screen-scroll">
+        <header class="page-header-row">
+          <button class="icon-btn" onclick="navigateTo('player')" aria-label="Back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <h2 class="page-title" style="margin:0 auto;">Queue</h2>
+          <button class="icon-btn" aria-label="Clear">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </button>
+        </header>
+
+        <h3 class="queue-section-title">New Playing</h3>
+        <div class="queue-item">
+          <div class="queue-cover" style="background:#4A3728;"></div>
+          <div class="queue-info">
+            <p class="queue-title">Maula Mera Maula</p>
+            <p class="queue-artist">Roop kumar rathod</p>
+          </div>
+        </div>
+
+        <div class="queue-dots-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#999"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+        </div>
+
+        <h3 class="queue-section-title">Next In Queue</h3>
+        <div class="queue-item">
+          <div class="queue-handle">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#999"><circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></svg>
+          </div>
+          <div class="queue-cover" style="background:#4A3728;"></div>
+          <div class="queue-info">
+            <p class="queue-title">Maula Mera Maula</p>
+            <p class="queue-artist">Roop kumar rathod</p>
+          </div>
+          <div class="queue-reorder">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </div>
+        </div>
+        <div class="queue-item">
+          <div class="queue-handle"></div>
+          <div class="queue-cover" style="background:#8B4513;"></div>
+          <div class="queue-info">
+            <p class="queue-title">Tera mera pyaar hai amar</p>
+            <p class="queue-artist">Ahmed Jahanzeb</p>
+          </div>
+          <div class="queue-reorder">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </div>
+        </div>
+        <div class="queue-item">
+          <div class="queue-handle"></div>
+          <div class="queue-cover" style="background:#D4A574;"></div>
+          <div class="queue-info">
+            <p class="queue-title">Aazru</p>
+            <p class="queue-artist">Asim Azhar, Noor, Khan, MAdhurxo</p>
+          </div>
+          <div class="queue-reorder">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </div>
+        </div>
+        <div class="queue-item">
+          <div class="queue-handle"></div>
+          <div class="queue-cover" style="background:#333;"></div>
+          <div class="queue-info">
+            <p class="queue-title">Qurban</p>
+            <p class="queue-artist">Masroor Ali Khan, Goher Mumtaz</p>
+          </div>
+          <div class="queue-reorder">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </div>
+        </div>
+        <div class="queue-item">
+          <div class="queue-handle"></div>
+          <div class="queue-cover" style="background:#8B4513;"></div>
+          <div class="queue-info">
+            <p class="queue-title">Tera mera pyaar hai amar</p>
+            <p class="queue-artist">Ahmed Jahanzeb</p>
+          </div>
+          <div class="queue-reorder">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SETTINGS ==================== -->
+    <section id="screen-settings" class="screen">
+      <div class="screen-scroll">
+        <header class="settings-header">
+          <button class="icon-btn" onclick="navigateTo('home')" aria-label="Back">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <h2 class="page-title" style="margin:0;">Settings</h2>
+          <div style="width:32px"></div>
+        </header>
+
+        <div class="settings-profile">
+          <div class="settings-avatar"></div>
+          <div class="settings-profile-info">
+            <p class="settings-name">Ravi <span class="crown">👑</span></p>
+            <p class="settings-plan">Premium Plan</p>
+          </div>
+        </div>
+
+        <div class="settings-menu" id="settings-menu-main">
+          <button class="settings-item" data-submenu="premium">
+            <span class="settings-icon">👑</span>
+            <span class="settings-label">Upgrade to premium</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="settings-item" data-submenu="download">
+            <span class="settings-icon">⬇️</span>
+            <span class="settings-label">Download</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="settings-item" data-submenu="audio">
+            <span class="settings-icon">🔊</span>
+            <span class="settings-label">Audio Quality</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="settings-item" data-submenu="notifications">
+            <span class="settings-icon">🔔</span>
+            <span class="settings-label">Notifications</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="settings-item" data-submenu="appearance">
+            <span class="settings-icon">🎨</span>
+            <span class="settings-label">Appearance</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="settings-item" data-submenu="language">
+            <span class="settings-icon">🌐</span>
+            <span class="settings-label">Language</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="settings-item" data-submenu="data">
+            <span class="settings-icon">🗄️</span>
+            <span class="settings-label">Data & Storage</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="settings-item" data-submenu="about">
+            <span class="settings-icon">ℹ️</span>
+            <span class="settings-label">About</span>
+            <svg class="settings-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <!-- Sub-settings screens -->
+        <div class="settings-submenu" id="submenu-premium" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">Upgrade to Premium</h3>
+          <div class="premium-card">
+            <p class="premium-title">Premium Plan</p>
+            <p class="premium-desc">Unlock ad-free music, offline downloads, and high-quality audio.</p>
+            <button class="btn-primary">Upgrade Now</button>
+          </div>
+          <div class="premium-features">
+            <div class="feature-item">✓ Ad-free music</div>
+            <div class="feature-item">✓ Offline download</div>
+            <div class="feature-item">✓ High quality audio</div>
+            <div class="feature-item">✓ Exclusive content</div>
+          </div>
+        </div>
+
+        <div class="settings-submenu" id="submenu-download" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">Download</h3>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Download Quality</p>
+              <p class="settings-sublabel">High</p>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Download Location</p>
+              <p class="settings-sublabel">Phone Storage</p>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Auto-Download</p>
+              <p class="settings-sublabel">Off</p>
+            </div>
+            <div class="toggle-off"></div>
+          </div>
+        </div>
+
+        <div class="settings-submenu" id="submenu-audio" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">Audio Quality</h3>
+          <div class="audio-options">
+            <button class="audio-opt">Low (128 kbps)</button>
+            <button class="audio-opt">Medium (256 kbps)</button>
+            <button class="audio-opt active">High (320 kbps)</button>
+            <button class="audio-opt">Very High (Lossless)</button>
+          </div>
+        </div>
+
+        <div class="settings-submenu" id="submenu-notifications" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">Notifications</h3>
+          <div class="toggle-row">
+            <div class="settings-text"><p class="settings-label">New Releases</p></div>
+            <div class="toggle-on"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="settings-text"><p class="settings-label">Playlists Updates</p></div>
+            <div class="toggle-on"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="settings-text"><p class="settings-label">Messages</p></div>
+            <div class="toggle-off"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="settings-text"><p class="settings-label">Reminders</p></div>
+            <div class="toggle-off"></div>
+          </div>
+        </div>
+
+        <div class="settings-submenu" id="submenu-appearance" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">Appearance</h3>
+          <div class="theme-options">
+            <button class="theme-opt active">
+              <span class="theme-icon">☀️</span>
+              <span>Light</span>
+            </button>
+            <button class="theme-opt">
+              <span class="theme-icon">🌙</span>
+              <span>Dark</span>
+            </button>
+            <button class="theme-opt">
+              <span class="theme-icon">💻</span>
+              <span>System</span>
+            </button>
+          </div>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Accent Color</p>
+              <p class="settings-sublabel">Black</p>
+            </div>
+            <div class="color-dot" style="background:#000;"></div>
+          </div>
+        </div>
+
+        <div class="settings-submenu" id="submenu-language" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">Language</h3>
+          <div class="lang-list">
+            <button class="lang-item active">English <span class="check">✓</span></button>
+            <button class="lang-item">Urdu</button>
+            <button class="lang-item">Hindi</button>
+            <button class="lang-item">Spanish</button>
+            <button class="lang-item">French</button>
+            <button class="lang-item">German</button>
+          </div>
+        </div>
+
+        <div class="settings-submenu" id="submenu-data" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">Data & Storage</h3>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Storage Used</p>
+              <p class="settings-sublabel">2.4 GB / 128 GB</p>
+            </div>
+            <div class="progress-track" style="width:100%;margin-top:8px;">
+              <div class="progress-bar" style="width:2%;background:#ccc;"></div>
+            </div>
+          </div>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Cache</p>
+              <p class="settings-sublabel">120 MB</p>
+            </div>
+            <button class="btn-text">Clear</button>
+          </div>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Mobile Data</p>
+              <p class="settings-sublabel">Off</p>
+            </div>
+            <div class="toggle-off"></div>
+          </div>
+        </div>
+
+        <div class="settings-submenu" id="submenu-about" style="display:none;">
+          <button class="settings-item back-item" onclick="showSettingsMain()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="settings-label">Back</span>
+          </button>
+          <h3 class="submenu-title">About</h3>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">App Version</p>
+              <p class="settings-sublabel">2.5.0</p>
+            </div>
+          </div>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Terms of Service</p>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+          <div class="settings-item-static">
+            <div class="settings-text">
+              <p class="settings-label">Privacy Policy</p>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+        </div>
+
+        <button class="btn-logout">Log Out</button>
+      </div>
+    </section>
+
+    <!-- ==================== BOTTOM NAV ==================== -->
+    <nav class="bottom-nav" id="bottom-nav">
+      <button class="nav-item active" data-screen="home" onclick="navigateTo('home')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" data-screen="search" onclick="navigateTo('search')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <span>Search</span>
+      </button>
+      <button class="nav-item" data-screen="library" onclick="navigateTo('library')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Library</span>
+      </button>
+      <button class="nav-item" data-screen="liked" onclick="navigateTo('playlist')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span>Liked</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
