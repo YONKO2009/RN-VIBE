@@ -4,3 +4,4 @@
 - 2026-09-12: YouTube/Invidious API integration for search and playback (Task 2).
 - 2026-09-12: Audio Engine implemented with Web Audio API synthesizer (Task 3).
 - 2026-09-12: UI Wiring implemented: catalog, search, player, and visualizer connected (Task 4).
+- 2026-09-12: Aesthetic Polish: Obsidian dark theme, glassmorphism, and font styling applied (Task 5).
