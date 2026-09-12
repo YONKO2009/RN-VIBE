@@ -134,6 +134,14 @@
             </div>
           </div>
         </div>
+
+        <!-- Catalog Grid -->
+        <div class="catalog-section" style="margin-top:16px;">
+          <div class="section-header">
+            <h3 class="section-title">Library Catalog</h3>
+          </div>
+          <div id="catalog-grid" class="catalog-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0 8px;"></div>
+        </div>
       </div>
     </section>
 
@@ -373,6 +381,7 @@
 
         <div class="player-art">
           <div class="player-art-inner" style="background:#8B0000;">
+          <canvas id="viz-canvas" width="512" height="120" style="width:100%;max-width:512px;height:120px;border-radius:8px;background:#111;display:block;margin-top:8px;"></canvas>
             <div class="coke-badge">Coke<br/>Studio</div>
             <p class="player-art-season">SEASON 8</p>
             <h2 class="player-art-title">TAJDAR-E-HARAM</h2>
@@ -812,6 +821,7 @@
 
   <script src="js/config.js"></script>
   <script src="js/store.js"></script>
+  <script src="js/catalog-data.js"></script>
   <script src="js/api.js"></script>
   <script src="js/audio-engine.js"></script>
   <script src="js/player.js"></script>
